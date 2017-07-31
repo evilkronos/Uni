@@ -28,16 +28,14 @@ def squareRoot(y):
     print('numGuesses =', numGuesses)
     print(ans, 'is close to the Square root of', y)
 
-def squarRootComparrison(x,y):
-    squareRoot(y)
+def squarRootComparrison(x):
+    squareRoot(x)
     squareRootNewton(x)
-   # print("The Exhaustive search took: ",numGuesses,"steps to complete" ". Whereas the Newton-Raphson search took: ", numGuess)
     if numGuess < numGuesses:
         print("The Newton-Raphson search took: ", numGuess,"This is faster than the Exhaustive search by", numGuesses - numGuess,"steps.")
     else:
         print("The Exhaustive search took: ", numGuesses, "This is faster than the Newton-Raphson search by",
               numGuess - numGuesses, "steps.")
 
-y = float(input('Please enter a number to be squared by the Exhaustive search:'))
-x = float(input('Please enter a number to be squared by the Newton search:'))
-squarRootComparrison(x,y)
+x = float(input('Please enter a number to be squared by both algorithms:'))
+squarRootComparrison(x)
